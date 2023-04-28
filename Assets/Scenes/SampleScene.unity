@@ -181,6 +181,14 @@ MonoBehaviour:
       health: 86
       damage: 41
       defence: 3
+    - name: Mitu
+      health: 86
+      damage: 41
+      defence: 3
+    - name: Mitu
+      health: 86
+      damage: 41
+      defence: 3
 --- !u!1 &44765802
 GameObject:
   m_ObjectHideFlags: 0
