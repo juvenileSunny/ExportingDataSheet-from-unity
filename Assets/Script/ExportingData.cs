@@ -42,7 +42,7 @@ public class ExportingData : MonoBehaviour
         if(myPlayerList.player.Length > 0)
         {
             TextWriter tw = new StreamWriter(fileName, false);
-            tw.WriteLine("Name, Healr, Damage, Defense");
+            tw.WriteLine("Name, Health, Damage, Defense");
             tw.Close();
 
 
