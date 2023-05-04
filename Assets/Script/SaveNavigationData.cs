@@ -1,13 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Collections.Generic;
 
-public class JSTwo : MonoBehaviour
+public class SaveNavigationData : MonoBehaviour
 {
-     public Transform playerTransform;
+    public Transform playerTransform;
 
     private List<Vector3> navigationData = new List<Vector3>();
+    private string filePath;
+
+    void Start()
+    {
+        filePath = Application.dataPath + "/navigation_data.json";
+    }
 
     void Update()
     {
@@ -15,15 +20,14 @@ public class JSTwo : MonoBehaviour
         navigationData.Add(playerTransform.position);
     }
 
-    public void SaveNavigationDataToJson(string filePath)
+    void OnApplicationQuit()
     {
         // Convert the navigation data to a JSON string
         string json = JsonUtility.ToJson(navigationData);
 
         // Save the JSON string to a file
         File.WriteAllText(filePath, json);
+
+        Debug.Log("Navigation data saved to " + filePath);
     }
-
-
-    
 }
