@@ -6,7 +6,6 @@ using System.IO;
 public class JSTwo : MonoBehaviour
 {
      public Transform playerTransform;
-
     private List<Vector3> navigationData = new List<Vector3>();
 
     void Update()
